@@ -22,17 +22,50 @@ final class RoutesProviderTest extends AbstractKernelTestCase
         $this->routesProvider = $this->getService(RoutesProvider::class);
     }
 
+    /**
+     * @requires PHP 8.0
+     */
     public function testProvideRoute(): void
     {
         $this->assertCount(6, $this->routesProvider->provide());
     }
 
+    /**
+     * @requires PHP <= 7.4
+     */
+    public function testProvideRouteWithAnnotations(): void
+    {
+        $this->assertCount(2, $this->routesProvider->provide());
+    }
+
+    /**
+     * @requires PHP 8.0
+     */
     public function testGetRouteWithoutArguments(): void
     {
         $this->assertCount(4, $this->routesProvider->provideRoutesWithoutArguments());
     }
 
+    /**
+     * @requires PHP <= 7.4
+     */
+    public function testGetRouteWithoutArgumentsWithAnnotations(): void
+    {
+        $this->assertCount(2, $this->routesProvider->provideRoutesWithoutArguments());
+    }
+
+    /**
+     * @requires PHP 8.0
+     */
     public function testGetRouteWithParameters(): void
+    {
+        $this->assertCount(2, $this->routesProvider->provideRoutesWithParameters());
+    }
+
+    /**
+     * @requires PHP <= 7.4
+     */
+    public function testGetRouteWithParametersWithAnnotations(): void
     {
         $this->assertCount(2, $this->routesProvider->provideRoutesWithParameters());
     }
