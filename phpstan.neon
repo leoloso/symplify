@@ -486,3 +486,7 @@ parameters:
                  - packages/autodiscovery/src/HttpKernel/AutodiscoveryKernel.php #12
                  - packages/phpunit-upgrader/src/HttpKernel/PHPUnitUpgraderKernel.php #15
                  - packages/psr4-switcher/src/HttpKernel/Psr4SwitcherKernel.php #15
+                 - packages/easy-hydrator/src/EasyHydratorBundle.php #15
+                 - packages/simple-php-doc-parser/tests/HttpKernel/SimplePhpDocParserKernel.php #12
+                 - packages/template-checker/src/HttpKernel/TemplateCheckerKernel.php #12
+                 - packages/vendor-patches/src/HttpKernel/VendorPatchesKernel.php #15
