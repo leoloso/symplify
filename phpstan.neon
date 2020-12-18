@@ -483,3 +483,6 @@ parameters:
                  - packages/smart-file-system/src/Json/JsonFileSystem.php #33
                  - packages/smart-file-system/src/Json/JsonFileSystem.php #41
                  - packages/sniffer-fixer-to-ecs-converter/src/HttpKernel/SnifferFixerToECSKernel.php #15
+                 - packages/autodiscovery/src/HttpKernel/AutodiscoveryKernel.php #12
+                 - packages/phpunit-upgrader/src/HttpKernel/PHPUnitUpgraderKernel.php #15
+                 - packages/psr4-switcher/src/HttpKernel/Psr4SwitcherKernel.php #15
