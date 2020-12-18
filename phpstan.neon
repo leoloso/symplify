@@ -423,3 +423,45 @@ parameters:
             message: '#"%s" in sprintf\(\) format must be quoted#'
             paths:
                  - packages/monorepo-builder/packages/release/src/Command/ReleaseCommand.php #110
+
+        -
+            message: '#Content of method ".*" is duplicated with method in ".*" class, use unique content instead#'
+            paths:
+                 - packages/changelog-linker/src/ValueObject/ChangeTree/Change.php #48
+                 - packages/class-presence/src/HttpKernel/ClassPresenceKernel.php #12
+                 - packages/coding-standard/src/Fixer/Annotation/DoctrineAnnotationNewlineInNestedAnnotationFixer.php #53
+                 - packages/coding-standard/src/Fixer/ArrayNotation/ArrayListItemNewlineFixer.php #28
+                 - packages/coding-standard/src/Fixer/ArrayNotation/ArrayOpenerAndCloserNewlineFixer.php #28
+                 - packages/coding-standard/src/Fixer/ArrayNotation/StandaloneLineInMultilineArrayFixer.php #47
+                 - packages/coding-standard/src/Fixer/Commenting/ParamReturnAndVarTagMalformsFixer.php #62
+                 - packages/coding-standard/src/Fixer/Commenting/RemoveCommentedCodeFixer.php #59
+                 - packages/coding-standard/src/Fixer/Commenting/RemoveUselessDefaultCommentFixer.php #37
+                 - packages/coding-standard/src/Fixer/Commenting/RemoveUselessDefaultCommentFixer.php #42
+                 - packages/coding-standard/src/Fixer/LineLength/LineLengthFixer.php #85
+                 - packages/coding-standard/src/Fixer/Naming/StandardizeHereNowDocKeywordFixer.php #52
+                 - packages/coding-standard/src/Fixer/Spacing/MethodChainingNewlineFixer.php #53
+                 - packages/coding-standard/src/Fixer/Spacing/SpaceAfterCommaHereNowDocFixer.php #28
+                 - packages/coding-standard/src/Fixer/Strict/BlankLineAfterStrictTypesFixer.php #57
+                 - packages/config-transformer/src/Configuration/Configuration.php #71
+                 - packages/config-transformer/src/Configuration/Configuration.php #76
+                 - packages/console-package-builder/tests/HttpKernel/ConsolePackageBuilderKernel.php #34
+                 - packages/easy-coding-standard/src/DependencyInjection/Extension/EasyCodingStandardExtension.php #14
+                 - packages/easy-coding-standard/src/Error/ErrorAndDiffCollector.php #93
+                 - packages/easy-coding-standard/src/Error/ErrorAndDiffCollector.php #101
+                 - packages/easy-coding-standard/src/Error/ErrorAndDiffCollector.php #127
+                 - packages/easy-coding-standard/src/ValueObject/Error/CodingStandardError.php #44
+                 - packages/easy-testing/src/ValueObject/InputFileInfoAndExpected.php #35
+                 - packages/easy-testing/src/ValueObject/InputFileInfoAndExpected.php #48
+                 - packages/easy-testing/src/ValueObject/InputFileInfoAndExpectedFileInfo.php #37
+                 - packages/latte-to-twig-converter/src/HttpKernel/LatteToTwigConverterKernel.php #12
+                 - packages/monorepo-builder/src/ValueObject/Package.php #43
+                 - packages/php-config-printer/src/DependencyInjection/Extension/PhpConfigPrinterExtension.php #14
+                 - packages/psr4-switcher/src/ValueObject/Psr4NamespaceToPath.php #33
+                 - packages/rule-doc-generator/src/ValueObject/RuleDefinition.php #46
+                 - packages/set-config-resolver/src/ValueObject/Set.php #27
+                 - packages/static-detector/src/ValueObject/StaticClassMethod.php #33
+                 - packages/static-detector/src/ValueObject/StaticClassMethod.php #38
+                 - packages/symfony-route-usage/src/Entity/RouteVisit.php #90
+                 - packages/symfony-static-dumper/tests/test_project/src/ControllerWithDataProvider/AnotherDataProvider.php #17
+                 - packages/template-checker/src/ValueObject/ClassMethodName.php #51
+                 - packages/template-checker/src/ValueObject/ClassMethodName.php #56
