@@ -476,3 +476,10 @@ parameters:
                  - packages/phpstan-rules/src/Rules/SeeAnnotationToTestRule.php #69
                  - packages/phpunit-upgrader/src/ValueObject/FileLine.php #25
                  - packages/psr4-switcher/src/ValueObject/Psr4NamespaceToPaths.php #33
+                 - packages/config-transformer/src/HttpKernel/ConfigTransformerKernel.php #15
+                 - packages/easy-coding-standard/packages/configuration/src/Configuration.php #131
+                 - packages/phpmd-decomposer/src/HttpKernel/PHPMDDecomposerKernel.php #15
+                 - packages/skipper/src/DependencyInjection/Extension/SkipperExtension.php #14
+                 - packages/smart-file-system/src/Json/JsonFileSystem.php #33
+                 - packages/smart-file-system/src/Json/JsonFileSystem.php #41
+                 - packages/sniffer-fixer-to-ecs-converter/src/HttpKernel/SnifferFixerToECSKernel.php #15
