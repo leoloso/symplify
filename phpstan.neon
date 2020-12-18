@@ -465,3 +465,14 @@ parameters:
                  - packages/symfony-static-dumper/tests/test_project/src/ControllerWithDataProvider/AnotherDataProvider.php #17
                  - packages/template-checker/src/ValueObject/ClassMethodName.php #51
                  - packages/template-checker/src/ValueObject/ClassMethodName.php #56
+                 - packages/latte-to-twig-converter/src/CaseConverter/CommentCaseConverter.php #18
+                 - packages/php-config-printer/src/Provider/CurrentFilePathProvider.php #19
+                 - packages/phpstan-extensions/src/ReturnTypeExtension/GetServiceReturnTypeExtension.php #44
+                 - packages/phpstan-rules/packages/object-calisthenics/src/Rules/TooManyPropertiesRule.php #38
+                 - packages/phpstan-rules/src/Rules/IfNewTypeThenImplementInterfaceRule.php #57
+                 - packages/phpstan-rules/src/Rules/NoClassWithStaticMethodWithoutStaticNameRule.php #71
+                 - packages/phpstan-rules/src/Rules/NoSuffixValueObjectClassRule.php #35
+                 - packages/phpstan-rules/src/Rules/PrefixAbstractClassRule.php #38
+                 - packages/phpstan-rules/src/Rules/SeeAnnotationToTestRule.php #69
+                 - packages/phpunit-upgrader/src/ValueObject/FileLine.php #25
+                 - packages/psr4-switcher/src/ValueObject/Psr4NamespaceToPaths.php #33
