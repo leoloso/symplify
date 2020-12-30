@@ -66,7 +66,7 @@ jobs:
                     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                 with:
                     package-directory: 'packages-scoped/${{ matrix.scoped_package.directory }}'
-                    split-repository-organization: '${{ steps.output_data.outputs.organizations[matrix.package.directory] }}'
+                    split-repository-organization: '${{ steps.output_data.outputs.package_dir_data[matrix.package.directory].organization }}'
                     split-repository-name: '${{ matrix.scoped_package.directory }}-prefixed'
                     tag: ${{ steps.previous_tag.outputs.tag }}
                     user-name: "kaizen-ci"

@@ -52,15 +52,10 @@ final class PackageJsonProvider
     }
 
     /**
-     * @return array<string, string>
+     * @return array<string, mixed[]>
      */
-    public function providePackageDirOrganizations(): array
+    public function providePackageDirData(): array
     {
-        return array_map(
-            function (array $config): string {
-                return $config['organization'];
-            },
-            $this->packageDirectoriesData
-        );
+        return $this->packageDirectoriesData;
     }
 }

@@ -11,7 +11,7 @@ use Symplify\MonorepoBuilder\Json\PackageJsonProvider;
 use Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
 use Symplify\PackageBuilder\Console\ShellCode;
 
-final class PackageDirOrganizationsJsonCommand extends AbstractSymplifyCommand
+final class PackageDirDataJsonCommand extends AbstractSymplifyCommand
 {
     /**
      * @var PackageJsonProvider
@@ -32,10 +32,10 @@ final class PackageDirOrganizationsJsonCommand extends AbstractSymplifyCommand
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $packageDirOrganizations = $this->packageJsonProvider->providePackageDirOrganizations();
+        $packageDirData = $this->packageJsonProvider->providePackageDirData();
 
         // must be without spaces, otherwise it breaks GitHub Actions json
-        $json = Json::encode($packageDirOrganizations);
+        $json = Json::encode($packageDirData);
         $this->symfonyStyle->writeln($json);
 
         return ShellCode::SUCCESS;

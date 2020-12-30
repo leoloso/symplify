@@ -26,7 +26,7 @@ jobs:
                 id: output_data
                 run: |
                     echo "::set-output name=matrix::$(packages/monorepo-builder/bin/monorepo-builder packages-json)"
-                    echo "::set-output name=organizations::$(packages/monorepo-builder/bin/monorepo-builder package-dir-organizations-json)"
+                    echo "::set-output name=package_dir_data::$(packages/monorepo-builder/bin/monorepo-builder package-dir-data-json)"
 
         outputs:
             matrix: ${{ steps.output_data.outputs.matrix }}
