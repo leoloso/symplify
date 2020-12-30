@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Symplify\MonorepoBuilder\Json;
 
-use Nette\Utils\Strings;
 use Symplify\MonorepoBuilder\Package\PackageProvider;
 use Symplify\MonorepoBuilder\Parameter\ParameterSupplier;
 use Symplify\MonorepoBuilder\ValueObject\Option;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use Symplify\SymplifyKernel\Exception\ShouldNotHappenException;
 
 final class PackageJsonProvider
 {
