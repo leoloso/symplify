@@ -44,24 +44,23 @@ final class PackageJsonProvider
             $packageEntries[] = [
                 'name' => $package->getShortName(),
                 'path' => $package->getRelativePath(),
-                'organization' => $this->getRepoOwnerForPackageDirectory($package->getRealPath()),
+                'directory' => dirname($package->getRealPath()),
             ];
         }
 
         return $packageEntries;
     }
 
-    private function getRepoOwnerForPackageDirectory(string $packageRealPath): string
+    /**
+     * @return array<string, string>
+     */
+    public function providePackageDirOrganizations(): array
     {
-        // Iterate all entries until finding the one for the package's path
-        foreach ($this->packageDirectoriesData as $packageDirectory => $packageData) {
-            if (Strings::startsWith($packageRealPath, $packageDirectory)) {
-                return (string) $packageData['organization'];
-            }
-        }
-
-        throw new ShouldNotHappenException(
-            sprintf('There is no organization for the package under path "%s"', $packageRealPath)
+        return array_map(
+            function (array $config): string {
+                return $config['organization'];
+            },
+            $this->packageDirectoriesData
         );
     }
 }

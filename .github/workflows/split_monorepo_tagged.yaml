@@ -27,7 +27,9 @@ jobs:
             # get package json list
             -
                 id: output_data
-                run: echo "::set-output name=matrix::$(packages/monorepo-builder/bin/monorepo-builder packages-json)"
+                run: |
+                    echo "::set-output name=matrix::$(packages/monorepo-builder/bin/monorepo-builder packages-json)"
+                    echo "::set-output name=organizations::$(packages/monorepo-builder/bin/monorepo-builder package-dir-organizations-json)"
 
         # this step is needed, so the output gets to the next defined job
         outputs:
@@ -63,7 +65,7 @@ jobs:
                     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                 with:
                     package-directory: '${{ matrix.package.path }}'
-                    split-repository-organization: '${{ matrix.package.organization }}'
+                    split-repository-organization: '${{ steps.output_data.outputs.organizations[matrix.package.directory] }}'
                     split-repository-name: '${{ matrix.package.name }}'
                     tag: ${{ steps.previous_tag.outputs.tag }}
                     user-name: "kaizen-ci"
